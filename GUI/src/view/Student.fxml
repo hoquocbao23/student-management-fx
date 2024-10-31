@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="605.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController">
+   <children>
+      <Pane id="header" layoutX="-15.0" prefHeight="120.0" prefWidth="734.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="250.0" layoutY="37.0" prefHeight="46.0" prefWidth="234.0" text="MANAGE STUDENT">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogout" layoutX="625.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="26.0" prefWidth="109.0" text="LOGOUT" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableStudent" layoutX="92.0" layoutY="286.0" prefHeight="295.0" prefWidth="576.0">
+        <columns>
+        <TableColumn fx:id="cStudentId" prefWidth="85.5999984741211" text="STUDENT ID" />
+          <TableColumn fx:id="cFirstName" prefWidth="226.4000244140625" text="FIRST NAME" />
+        
+            <TableColumn fx:id="cLastName" prefWidth="171.19998168945312" text="LAST NAME" />
+            <TableColumn fx:id="cStudentMark" prefWidth="94.39996337890625" text="MARK" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtFirstName" layoutX="177.0" layoutY="156.0" prefHeight="25.0" prefWidth="350.0" />
+      <Label layoutX="72.0" layoutY="160.0" text="FIRST NAME" />
+      <Label layoutX="74.0" layoutY="198.0" text="LAST NAME" />
+      <Label layoutX="70.0" layoutY="232.0" text="TOTAL MARK" />
+      <TextField fx:id="txtLastName" layoutX="177.0" layoutY="194.0" prefHeight="25.0" prefWidth="350.0" />
+      <TextField fx:id="txtStudentMark" layoutX="177.0" layoutY="237.0" prefHeight="25.0" prefWidth="350.0" />
+      <Button fx:id="btnAddStudent" layoutX="553.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAddStudentOnAction" prefHeight="25.0" prefWidth="116.0" text="ADD STUDENT" />
+      <Button fx:id="btnUpdateStudent" layoutX="556.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnUpdateStudentOnAction" text="UPDATE STUDENT" />
+      <Button fx:id="btnDeleteStudent" layoutX="553.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnDeleteStudentOnAction" text="DELETE STUDENT" />
+      <TextField fx:id="txtStudentId" layoutX="177.0" layoutY="121.0" prefHeight="26.0" prefWidth="116.0" />
+      <Label layoutX="72.0" layoutY="125.0" prefHeight="18.0" prefWidth="71.0" text="STUDENT ID" />
+      <Button fx:id="btnCancel" layoutX="552.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="26.0" prefWidth="109.0" text="CANCEL" />
+   </children>
+</AnchorPane>
